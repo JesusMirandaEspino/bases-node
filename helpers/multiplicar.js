@@ -11,6 +11,7 @@ const crearTablaMultiplicar = async(base = 1, listar = false, hasta = 10) => {
     try{
         let a = base;
         let salida = '';
+        let consola = '';
         let h = hasta;
 
         if( listar ){
@@ -24,15 +25,16 @@ const crearTablaMultiplicar = async(base = 1, listar = false, hasta = 10) => {
         for( let b = 1; b < h+1; b++ ){
             let c = b * a;
             salida += `${a} x ${b} = ${c}\n`;
+            consola += `${a} ${'x'.yellow} ${b} ${'='.yellow} ${c}\n`;
         }
 
         if( listar ){
-            console.log( salida );
+            console.log( consola );
         }
 
         fs.writeFileSync( `tabla-${a}.txt`, salida );
 
-        /*resolve(  */ return `archivo tabla del ${a} creado, desde multiplicar el 1 hasta el ${h}` /*  )*/;
+        /*resolve(  */ return `archivo tabla del ${a} creado, desde multiplicar del 1 hasta el ${h}` /*  )*/;
 
        // } );
             }
