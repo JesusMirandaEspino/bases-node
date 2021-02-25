@@ -1,0 +1,25 @@
+{
+  "name": "bases-node",
+  "version": "0.0.1",
+  "description": "Es una simple tabla de multiplicar con archivo de texto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusMirandaEspino/bases-node.git"
+  },
+  "author": "Jesus Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesusMirandaEspino/bases-node/issues"
+  },
+  "homepage": "https://github.com/JesusMirandaEspino/bases-node#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
