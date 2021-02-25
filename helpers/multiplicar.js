@@ -1,7 +1,7 @@
 
 const fs = require( 'fs' );
 
-const crearTablaMultiplicar = async(base) => {
+const crearTablaMultiplicar = async(base = 1, listar = false) => {
 
    // return new Promise( (resolve, reject)  => {
 
@@ -10,10 +10,12 @@ const crearTablaMultiplicar = async(base) => {
         let a = base;
         let salida = '';
 
+        if( listar ){
+            console.log( '======================' );
+            console.log( `     Tabla del:`, a      );
+            console.log( '======================' );
+        }
 
-        console.log( '======================' );
-        console.log( `     Tabla del:`, a      );
-        console.log( '======================' );
 
 
         for( let b = 1; b < 11; b++ ){
@@ -21,7 +23,9 @@ const crearTablaMultiplicar = async(base) => {
             salida += `${a} x ${b} = ${c}\n`;
         }
 
-        console.log( salida )
+        if( listar ){
+            console.log( salida );
+        }
 
         fs.writeFileSync( `tabla-${a}.txt`, salida );
 
