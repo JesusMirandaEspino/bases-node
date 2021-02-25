@@ -10,7 +10,14 @@ const argv = require('yargs')
             type: 'boolean',
             demandOption: true,
             default: false,
-            describe: 'Muestra la bse en consola'
+            describe: 'Muestra la base en consola'
+        } )
+        .option( 'h', {
+            alias: 'hasta',
+            type: 'number',
+            demandOption: true,
+            default: 10,
+            describe: 'Valor hasta donde se multiplica'
         } )
         .check( (argv, options) => {
             if( isNaN( argv.b ) ){

@@ -3,7 +3,7 @@ const fs = require( 'fs' );
 const colors = require('colors');
 
 
-const crearTablaMultiplicar = async(base = 1, listar = false) => {
+const crearTablaMultiplicar = async(base = 1, listar = false, hasta = 10) => {
 
    // return new Promise( (resolve, reject)  => {
 
@@ -11,6 +11,7 @@ const crearTablaMultiplicar = async(base = 1, listar = false) => {
     try{
         let a = base;
         let salida = '';
+        let h = hasta;
 
         if( listar ){
             console.log( '======================'.green  );
@@ -20,9 +21,9 @@ const crearTablaMultiplicar = async(base = 1, listar = false) => {
 
 
 
-        for( let b = 1; b < 11; b++ ){
+        for( let b = 1; b < h+1; b++ ){
             let c = b * a;
-            salida += `${a} ${'x'.yellow} ${b} ${'='.yellow} ${c}\n`;
+            salida += `${a} x ${b} = ${c}\n`;
         }
 
         if( listar ){
@@ -31,7 +32,7 @@ const crearTablaMultiplicar = async(base = 1, listar = false) => {
 
         fs.writeFileSync( `tabla-${a}.txt`, salida );
 
-        /*resolve(  */ return `archivo tabla del ${a} creado` /*  )*/;
+        /*resolve(  */ return `archivo tabla del ${a} creado, desde multiplicar el 1 hasta el ${h}` /*  )*/;
 
        // } );
             }

@@ -16,6 +16,6 @@ console.log( base );
 
 
 
-crearTablaMultiplicar(  argv.b, argv.l  )
+crearTablaMultiplicar(  argv.b, argv.l, argv.h  )
     .then( nombreArchivo => console.log( nombreArchivo, 'a sido creado' ) )
     .catch((err) => {console.log( err )});
