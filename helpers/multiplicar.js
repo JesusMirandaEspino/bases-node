@@ -32,7 +32,7 @@ const crearTablaMultiplicar = async(base = 1, listar = false, hasta = 10) => {
             console.log( consola );
         }
 
-        fs.writeFileSync( `tabla-${a}.txt`, salida );
+        fs.writeFileSync( `./salidas/tabla-${a}.txt`, salida );
 
         /*resolve(  */ return `archivo tabla del ${a} creado, desde multiplicar del 1 hasta el ${h}` /*  )*/;
 
